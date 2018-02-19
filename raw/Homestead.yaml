@@ -1,0 +1,23 @@
+ip: {HOMESTEAD_IP_ADDRESS}
+memory: 2048
+cpus: 1
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    -
+        map: {REPOSITORY_FOLDER}
+        to: /home/vagrant/{REPOSITORY_FOLDER}
+
+sites:
+    -
+        map: {PROJECT_URL}
+        to: /home/vagrant/{REPOSITORY_FOLDER}/{GIT_FOLDER_NAME}/public
+
+databases:
+    - {DB_DATABASE}
+
+name: myproject
+hostname: myproject
