@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 PROJECT_ROOT=$HOME;
 PROJECT_NAME="MyProject";
 PROJECT_URL="myproject.local";

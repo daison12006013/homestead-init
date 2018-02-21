@@ -8,6 +8,6 @@ This package will help you to compile every tools you used before inside the hom
 - ssh
 - vagrant
 
-To install the system you need to run `sh install.sh`, you can modify the `configuration.sh` and also replace the `raw/Homestead.yaml` on your suitable config.
+To install the system you need to run `./install`, you need to modify the `config` and may modify/replace the `raw/Homestead.yaml` on your suitable config.
 
-Everything runs under the `install.sh` so you may change it on your own ways.
+Everything runs under the `install` so you may change it on your own ways.

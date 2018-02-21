@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 unset PROJECT_ROOT;
 unset PROJECT_NAME;
 unset PROJECT_URL;

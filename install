@@ -1,13 +1,14 @@
+#!/usr/bin/env sh
 CREATOR_ROOT_DIR=$(pwd);
 
 # load all constant configuration
-source $CREATOR_ROOT_DIR/configuration.sh;
+source $CREATOR_ROOT_DIR/config;
 
 # install composer if does not exist
-source $CREATOR_ROOT_DIR/installers/composer.sh;
+source $CREATOR_ROOT_DIR/installers/composer;
 
 # install the homestead
-source $CREATOR_ROOT_DIR/installers/homestead.sh;
+source $CREATOR_ROOT_DIR/installers/homestead;
 
 # install necessary tools inside the vagrant
 (
@@ -43,6 +44,6 @@ source $CREATOR_ROOT_DIR/installers/homestead.sh;
     /bin/sh";
 );
 
-source $CREATOR_ROOT_DIR/installers/after-script.sh;
+source $CREATOR_ROOT_DIR/installers/after-script;
 
 unset CREATOR_ROOT_DIR;

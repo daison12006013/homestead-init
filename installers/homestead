@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 # validate if the homestead name exists in vagrant lists of boxes
 if [ $(vagrant global-status | grep -c "$HOMESTEAD_NAME") -eq "1" ]; then
     echo "\033[31m\nSorry, but $HOMESTEAD_NAME already exists!\n\033[0m";
