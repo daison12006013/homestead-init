@@ -1,4 +1,4 @@
-CREATOR_ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )";
+CREATOR_ROOT_DIR=$(pwd);
 
 # load all constant configuration
 source $CREATOR_ROOT_DIR/configuration.sh;
