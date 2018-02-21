@@ -4,10 +4,10 @@ CREATOR_ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )";
 source $CREATOR_ROOT_DIR/configuration.sh;
 
 # install composer if does not exist
-# source $CREATOR_ROOT_DIR/installers/composer.sh;
+source $CREATOR_ROOT_DIR/installers/composer.sh;
 
 # install the homestead
-# source $CREATOR_ROOT_DIR/installers/homestead.sh;
+source $CREATOR_ROOT_DIR/installers/homestead.sh;
 
 # install necessary tools inside the vagrant
 (
