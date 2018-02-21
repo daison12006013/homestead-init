@@ -19,5 +19,5 @@ sites:
 databases:
     - {DB_DATABASE}
 
-name: myproject
-hostname: myproject
+name: {HOMESTEAD_NAME}
+hostname: {HOMESTEAD_HOSTNAME}

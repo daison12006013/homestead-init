@@ -1,3 +1,9 @@
+# validate if the homestead name exists in vagrant lists of boxes
+if [ $(vagrant global-status | grep -c "$HOMESTEAD_NAME") -eq "1" ]; then
+    echo "\033[31m\nSorry, but $HOMESTEAD_NAME already exists!\n\033[0m";
+    exit 1;
+fi
+
 # install homestead
 cd $PROJECT_ROOT;
 mkdir -p $PROJECT_ROOT/$PROJECT_NAME;
@@ -21,6 +27,8 @@ sed -i -- "s/{PROJECT_URL}/$PROJECT_URL/g" Homestead.yaml;
 sed -i -- "s/{REPOSITORY_FOLDER}/$REPOSITORY_FOLDER/g" Homestead.yaml;
 sed -i -- "s/{HOMESTEAD_IP_ADDRESS}/$HOMESTEAD_IP_ADDRESS/g" Homestead.yaml;
 sed -i -- "s/{DB_DATABASE}/$DB_DATABASE/g" Homestead.yaml;
+sed -i -- "s/{HOMESTEAD_NAME}/$HOMESTEAD_NAME/g" Homestead.yaml;
+sed -i -- "s/{HOMESTEAD_HOSTNAME}/$HOMESTEAD_HOSTNAME/g" Homestead.yaml;
 rm "Homestead.yaml--";
 
 # append 'brc' inside the aliases

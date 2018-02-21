@@ -1,5 +1,5 @@
 PROJECT_ROOT=$HOME;
-PROJECT_NAME=MyProjects;
+PROJECT_NAME="MyProject";
 PROJECT_URL="myproject.local";
 
 GIT_REPOSITORY="git@github.com:laravel/laravel.git";
@@ -7,7 +7,9 @@ GIT_FOLDER_NAME="my-laravel-project";
 GIT_NAME="John Doe";
 GIT_EMAIL="john.doe@email.com";
 
-HOMESTEAD_IP_ADDRESS="192.168.32.10";
-REPOSITORY_FOLDER=repositories;
+HOMESTEAD_IP_ADDRESS="192.168.100.10";
+REPOSITORY_FOLDER="repositories";
+HOMESTEAD_NAME="myproject";
+HOMESTEAD_HOSTNAME="myproject";
 
 DB_DATABASE="myproject";
