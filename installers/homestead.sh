@@ -20,6 +20,7 @@ sed -i -- "s/{GIT_FOLDER_NAME}/$GIT_FOLDER_NAME/g" Homestead.yaml;
 sed -i -- "s/{PROJECT_URL}/$PROJECT_URL/g" Homestead.yaml;
 sed -i -- "s/{REPOSITORY_FOLDER}/$REPOSITORY_FOLDER/g" Homestead.yaml;
 sed -i -- "s/{HOMESTEAD_IP_ADDRESS}/$HOMESTEAD_IP_ADDRESS/g" Homestead.yaml;
+sed -i -- "s/{DB_DATABASE}/$DB_DATABASE/g" Homestead.yaml;
 rm "Homestead.yaml--";
 
 # append 'brc' inside the aliases
