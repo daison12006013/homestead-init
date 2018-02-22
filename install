@@ -31,7 +31,7 @@ source $CREATOR_ROOT_DIR/installers/homestead;
     vagrant ssh -- -t "(
         cd ~/$REPOSITORY_FOLDER;
         rm -rf $GIT_FOLDER_NAME;
-        git clone $GIT_REPOSITORY $GIT_FOLDER_NAME;
+        GIT_SSH_COMMAND=\"ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no\" git clone $GIT_REPOSITORY $GIT_FOLDER_NAME;
         cd ~/$REPOSITORY_FOLDER/$GIT_FOLDER_NAME;
         cp .env.example .env;
         sed -i -- \"s/DB_DATABASE=homestead/DB_DATABASE=$DB_DATABASE/g\" .env;
