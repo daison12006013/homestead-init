@@ -19,14 +19,6 @@ source $CREATOR_ROOT_DIR/installers/homestead;
     # copy supervisord.conf
     cat $CREATOR_ROOT_DIR/raw/supervisord.conf | vagrant ssh -c "sudo cat - > /etc/supervisor/supervisord.conf"
 
-    # initialize ssh (DO NOT REMOVE THIS)
-    vagrant ssh -- -t "(
-        cd ~/$REPOSITORY_FOLDER;
-        git clone $GIT_REPOSITORY $GIT_FOLDER_NAME;
-    );
-    exit;
-    /bin/sh";
-
     # update below if you need to add more commands
     vagrant ssh -- -t "(
         cd ~/$REPOSITORY_FOLDER;
